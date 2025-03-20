@@ -1,0 +1,188 @@
+<!--Name: Ivan Galan
+    Date: 19/03/2025
+
+    HW requierments
+    Grid is in the "artisans section"
+    the main queries for saller devices are in:
+        - grid (artisans)
+        - footer
+        - the nav in the shop section turning into the hamburguer menu
+        - with flex wrap the prodcts in the shop section turn into coluns
+        - the form getting less width
+        - animation is the fade in that the shop page has(I need to create another one for an element)
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Artisanal Market</title>
+    <link rel="stylesheet" href="styles1.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Delius+Unicase:wght@400;700&family=Fuzzy+Bubbles:wght@400;700&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Google Icon -->
+    <script src="https://kit.fontawesome.com/981336eb75.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <main class="first-page">
+        <nav class="search-bar">
+            <img clas="blue-logo" src="./images/logo-blue-market.png" alt="artisanal market logo">
+            <img clas="white-logo"src="./images/Logo-market.png" alt="artisanal market logo">
+            <h1 class="title-container">Online Artisanal Market</h1>
+        </nav>
+
+        <div id="first-page-buttons">
+            <a href="#about-us"><button><i class="fa-solid fa-shop"></i> Explore our Heritage</button></a>
+            <a href="shop.html">
+                <button><i class="fa-solid fa-cart-shopping"></i> Shop Now</button>
+            </a>
+        </div>
+            
+    </main>
+
+    <section class="second-page">
+        <section id="about-us" class="about-us">
+            <img src="./images/market-view-5.jpg" alt="mask image">
+            <div class="about-us-text">
+                <h1 class="text-white">OUR HERITAGE</h1>
+                <h2>Foundation and Purpose</h2>        
+                <p class="website-description">
+                    Founded in 1993, the Mercado Artesanal de Quito was created to preserve Ecuador’s cultural heritage by providing a platform for local artisans to showcase their handmade crafts. It promotes traditional Ecuadorian craftsmanship and serves as a key space for artisans to connect with both locals and tourists.</p>
+                <h2>Cultural Significance</h2>
+                <p class="website-description">
+                    The market is vital for preserving Ecuador’s diverse traditions. From Andean textiles to Amazonian crafts, each product tells the story of Ecuador’s rich cultural identity. The market ensures these traditions are kept alive for future generations.
+                </p>
+                <h2>A Hub for Tourism and Community</h2>
+                <p class="website-description">
+                    The Mercado Artesanal is a must-visit for both tourists and locals. Visitors can purchase unique handmade items while learning about Ecuador’s history and traditions, and the market serves as a cherished community space for cultural celebration.
+                </p>
+                <h2>Legacy and Future</h2>
+                <p class="website-description">
+                    The Mercado Artesanal de Quito continues to evolve, supporting artisans while preserving Ecuador’s craftsmanship. It remains an essential symbol of the city’s commitment to its cultural roots and a key player in Ecuador’s future.
+                </p>
+            </div>
+        </section>
+
+        <!--ARTISANS SENTION-->
+        <section class="artisans-section">
+            <!--<h2 class="section-title">Meet Our Artisans</h2>-->
+            <div class="artisans-container">
+                <h2 class="section-title">Meet Our Artisans</h2>
+                <div class="artisan-card">
+                    <div class="card-image" style="background-image: url('./images/artisan-2.jpg');"></div>
+                    <div class="card-info">
+                        <h3 class="artisan-name">Carlos Yupanqui</h3>
+                        <p class="artisan-description">A master weaver with over 20 years of experience, preserving Ecuadorian textile traditions.</p>
+                    </div>
+                </div>
+        
+                <div class="artisan-card">
+                    <div class="card-image" style="background-image: url('./images/artisan-1.jpg');"></div>
+                    <div class="card-info">
+                        <h3 class="artisan-name">María Quishpe</h3>
+                        <p class="artisan-description">Creates intricate ceramic pieces inspired by Andean culture and folklore.</p>
+                    </div>
+                </div>
+        
+                <div class="artisan-card">
+                    <div class="card-image" style="background-image: url('./images/artisan-3.jpg');"></div>
+                    <div class="card-info">
+                        <h3 class="artisan-name">David Guamán</h3>
+                        <p class="artisan-description">Expert in handcrafted jewelry, blending modern designs with ancestral techniques.</p>
+                    </div>
+                </div>
+
+                <div class="artisan-card">
+                    <div class="card-image" style="background-image: url('./images/artisan-4.jpg');"></div>
+                    <div class="card-info">
+                        <h3 class="artisan-name">Andrea Quishpe</h3>
+                        <p class="artisan-description">Talented weaver creating intricate textiles that tell the stories of Andean culture.</p>
+                    </div>
+                </div>
+                
+                <div class="artisan-card">
+                    <div class="card-image" style="background-image: url('./images/artisan-5.jpg');"></div>
+                    <div class="card-info">
+                        <h3 class="artisan-name">Mateo Lema</h3>
+                        <p class="artisan-description">Skilled artisan crafting handmade musical instruments, preserving the traditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="more-details">
+        <!--More Details SECTION-->
+            <div class="detail-1">
+            <h1>Why Buy Handmade?</h1>
+            <ul>
+                <li><strong>Support Artisans & Culture:</strong> Every purchase helps preserve Ecuadorian traditions and craftsmanship.</li>
+                <li><strong>Unique & High-Quality:</strong> Handmade products are crafted with care, making each piece one-of-a-kind.</li>
+                <li><strong>Sustainable & Ethical:</strong> Artisans use local, eco-friendly materials, ensuring fair and responsible production.</li>
+            </ul>
+            </div>
+
+            <div class="detail-2">
+            <h1>Customer Stories</h1>
+            <ul>
+                <li><strong>Sophie, USA:</strong> "My poncho is more than clothing—it's a piece of Ecuadorian history."</li>
+                <li><strong>Luis, Spain:</strong> "My handmade wallet carries a legacy of craftsmanship."</li>
+                <li><strong>Emily, Canada:</strong> "Handmade jewelry makes the perfect meaningful gift."</li>
+            </ul>
+            </div>
+        </section>
+        
+    <!--Video Section-->
+        <section class="video-seciton">
+            <h2 class="text-white text-center">Video</h2>
+            <video class="market-video" src="./images/market-video.mp4" autoplay muted loop></video>
+        </section>
+        
+
+
+
+    <!--Page Footer-->
+    <footer class="flex ">
+        <img id="footer-logo" class="h-[50vh] ml-1 shrink-1" src="./images/Logo-market.png" alt="Market logo">
+
+        <div class="footer-content flex">
+
+            <div class="footer1 flex flex-col w-[33%] ">
+                <h2 class="mb-4">Visit the Market in Person</h2>
+                <a href="https://maps.app.goo.gl/cGnBLaXht747BvSbA" target="_blank"><p><i class="fa-solid fa-route"></i> Jorge Washington 611, Quito-Ecuador 170143</p></a>
+            </div>
+
+            <div class="footer2 flex flex-col w-[33%]">
+                <h2 class="mb-4">Customer Service</h2>
+                <p>Contact us to know more information about the physical or online Artisanal Market</p>
+                <p><i class="fa-solid fa-phone"></i> (593) 98-771-8191</p>
+                <p><i class="fa-solid fa-envelope"></i> m.artesanal2021@gmail.com</p>
+            </div>
+
+            <div class="footer3 flex flex-col w-[33%]" >
+                <div class="social-media">
+                    <h2 class="mb-4">Follow</h2>
+                    <a href="https://www.facebook.com/MercadoArtesanalLaMariscalOficial/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/518929/mercado-artesanal-la-mariscal/?hl=es" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <i class="fa-brands fa-youtube"></i>
+                    <a href="https://x.com/merc_lamariscal" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    
+
+</body>
+</html>
