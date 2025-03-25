@@ -37,9 +37,10 @@ h2 {
 /* First page styles */
 .first-page {
     margin: none;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/p-hats-2.jpg');
+    background-image: url('images/p-hats-2.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /*<--------there is the parlax effect*/
     display: flex;
     width: 100%;
     height: 100vh;
@@ -55,7 +56,7 @@ h2 {
     width: 100%;
     height: 60px;
     padding: 0 20px;
-    position: sticky;
+    position: sticky;   /*<------here is a sticky element*/
     z-index: 10;
 }
 
@@ -106,7 +107,7 @@ h2 {
 }
 
 .first-page button {
-    margin: 0px 50px  50px;
+    margin: 0px 50px 50px;
     font-size: 1rem;
     width: 12rem;
     height: 3.5rem;
@@ -137,6 +138,7 @@ h2 {
     background-color: #20285963;
     cursor: pointer;
 }
+
 
 /* About Us Section */
 .second-page {
@@ -195,13 +197,13 @@ h2 {
 
 .artisans-container {
     color: var(--font-color-light);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-areas: /*  <---------- here is the grid with the area names*/
     "card1 title card2"
     "card3 card4 card5";
     width: 60%;
-    gap: 1rem;
+    gap: 1rem;   /*  <---------- here is the gap rpoperty for the grid*/
 }
 
 .section-title {
@@ -284,31 +286,16 @@ h2 {
 }
 
 /* More details about the market */
-.more-details{
-    background-color: #a7a7ac;
-    margin: 2rem 1rem 4rem 1rem;
-    box-shadow: 4px 4px 10px rgba(175, 165, 165, 0.3);
-    display: flex;
-    justify-content: center;
-}
+    .more-details{
+        background-color: #a7a7ac;
+        margin: 2rem 1rem 4rem 1rem;
+        box-shadow: 4px 4px 10px rgba(175, 165, 165, 0.3);
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 1rem;
+    }
 
-
-/* Market Video */
-.video-section {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-}
-
-.market-video {
-    justify-self: center;
-    object-fit: cover;
-    width: 50%;
-    height: 70vh;
-    margin-bottom: 4rem;
-    border: 5px;
-    border-radius: 15px;
-}
 
 /* Footer Styles */
 footer {
@@ -349,11 +336,31 @@ footer {
         "card3 card4"
         "card5 card5";
     }
+
+    .more-details {
+        background-color: #a7a7ac;
+        margin: 2rem 1rem 4rem 1rem;
+        box-shadow: 4px 4px 10px rgba(175, 165, 165, 0.3);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* <--here is the repeat auto fill---*/
+        gap: 10px;
+        justify-items: center; 
+        align-items: center;   
+        justify-content: center; 
+        align-content: center;  
+    }
 }
 
 @media (max-width: 530px) {
     .search-bar .title-container {
         font-size: 1.5rem;
+    }
+
+    #first-page-buttons {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: end;
     }
 
     #footer-logo{
@@ -372,3 +379,41 @@ footer {
         "card5";
     }
 }
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Fondo oscuro */
+        color: #ffffff; /* Texto blanco */
+    }
+    .search-bar:hover {
+        color: rgb(249, 249, 255);
+        background-color: rgba(49, 48, 48, 0.667);
+    }
+    
+    .search-bar:hover img:nth-of-type(2) {
+        opacity: 1;
+    }
+    .first-page button {
+        background-color:rgb(44, 43, 43);
+        color: white;
+    }
+    
+    .first-page button:hover {
+        background-color: var(--button-hover-bg);
+        color: var(--button-hover-color);
+        border-color: rgb(220, 220, 230);
+        cursor: pointer;
+    }
+    .artisans-section {
+        background-color: #343434;
+        color: #ffffff;
+    }
+    .section-title {
+        color: white;
+    }
+    .more-details{
+        background-color: #333333;
+    }
+  }

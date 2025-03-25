@@ -1,15 +1,9 @@
 <!--Name: Ivan Galan
-    Date: 19/03/2025
+    Date: 24/03/2025
 
-    HW requierments
-    Grid is in the "artisans section"
-    the main queries for saller devices are in:
-        - grid (artisans)
-        - footer
-        - the nav in the shop section turning into the hamburguer menu
-        - with flex wrap the prodcts in the shop section turn into coluns
-        - the form getting less width
-        - animation is the fade in that the shop page has(I need to create another one for an element)
+    work on:
+    - sticky
+
 -->
 
 
@@ -35,7 +29,7 @@
 
 <body>
 
-    <main class="first-page">
+    <header class="first-page">
         <nav class="search-bar">
             <img clas="blue-logo" src="./images/logo-blue-market.png" alt="artisanal market logo">
             <img clas="white-logo"src="./images/Logo-market.png" alt="artisanal market logo">
@@ -49,9 +43,9 @@
             </a>
         </div>
             
-    </main>
+    </header>
 
-    <section class="second-page">
+    <main class="second-page">
         <section id="about-us" class="about-us">
             <img src="./images/market-view-5.jpg" alt="mask image">
             <div class="about-us-text">
@@ -72,10 +66,10 @@
                     The Mercado Artesanal de Quito continues to evolve, supporting artisans while preserving Ecuador’s craftsmanship. It remains an essential symbol of the city’s commitment to its cultural roots and a key player in Ecuador’s future.
                 </p>
             </div>
-        </section>
+        </main>
 
-        <!--ARTISANS SENTION-->
-        <section class="artisans-section">
+        <!--ARTISANS SECTION-->
+        <section id="artisans-section" class="artisans-section">
             <!--<h2 class="section-title">Meet Our Artisans</h2>-->
             <div class="artisans-container">
                 <h2 class="section-title">Meet Our Artisans</h2>
@@ -121,26 +115,26 @@
             </div>
         </section>
 
-        <section class="more-details">
+        <article class="more-details">
         <!--More Details SECTION-->
             <div class="detail-1">
-            <h1>Why Buy Handmade?</h1>
-            <ul>
-                <li><strong>Support Artisans & Culture:</strong> Every purchase helps preserve Ecuadorian traditions and craftsmanship.</li>
-                <li><strong>Unique & High-Quality:</strong> Handmade products are crafted with care, making each piece one-of-a-kind.</li>
-                <li><strong>Sustainable & Ethical:</strong> Artisans use local, eco-friendly materials, ensuring fair and responsible production.</li>
-            </ul>
+                <h1>Why Buy Handmade?</h1>
+                <ul>
+                    <li><strong>Support Artisans & Culture:</strong> Every purchase helps preserve Ecuadorian traditions and craftsmanship.</li>
+                    <li><strong>Unique & High-Quality:</strong> Handmade products are crafted with care, making each piece one-of-a-kind.</li>
+                    <li><strong>Sustainable & Ethical:</strong> Artisans use local, eco-friendly materials, ensuring fair and responsible production.</li>
+                </ul>
             </div>
 
             <div class="detail-2">
-            <h1>Customer Stories</h1>
-            <ul>
-                <li><strong>Sophie, USA:</strong> "My poncho is more than clothing—it's a piece of Ecuadorian history."</li>
-                <li><strong>Luis, Spain:</strong> "My handmade wallet carries a legacy of craftsmanship."</li>
-                <li><strong>Emily, Canada:</strong> "Handmade jewelry makes the perfect meaningful gift."</li>
-            </ul>
+                <h1>Customer Stories</h1>
+                <ul>
+                    <li><strong>Sophie, USA:</strong> "My poncho is more than clothing—it's a piece of Ecuadorian history."</li>
+                    <li><strong>Luis, Spain:</strong> "My handmade wallet carries a legacy of craftsmanship."</li>
+                    <li><strong>Emily, Canada:</strong> "Handmade jewelry makes the perfect meaningful gift."</li>
+                </ul>
             </div>
-        </section>
+        </article>
         
 
 

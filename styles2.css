@@ -44,6 +44,52 @@
     background-color: var(--background-color);
     font-family: "Fuzzy Bubbles", serif;
   }
+
+
+/*  cart animation  */
+  .intro-animation {
+    background-color: rgb(192, 190, 190);
+    border-radius: 15px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin:center;
+    animation: leaving-page 2s 3s ease-in forwards;
+    z-index: 100;
+    
+}
+
+.intro-animation img {
+    position: absolute;
+}
+
+.gate{
+    height: 200px;
+}
+
+.huma-cart{
+    height: 100px;
+    animation: intro-page 2.5s;
+    z-index: 100;
+}
+
+@keyframes intro-page {
+    0% { transform: translatex(-100vw); }
+    100% { transform: translatex(0vw); }   
+}
+
+@keyframes leaving-page{
+    0% {transform: scale(1);
+        opacity: 1;}
+
+    100% {transform: scale(2);
+    opacity: 0;
+    display: none;}
+}
+/*--------------------------------------*/
   
   h1 {
     font-size: var(--heading-font-size);
@@ -75,7 +121,7 @@
   /*first part*/
   .main-nav {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     width: 100%;
     height: 50px;
     display: flex;
@@ -102,6 +148,7 @@
   #hamburguer-bars{
     display: none;
     cursor: pointer;
+    color: var(--tertiary-color);
     padding: var(--spacing-small);
     transition: transform 0.3s ease-in-out;
   }
@@ -176,7 +223,7 @@
   
   .call-to-action {
     font-family: "Fuzzy Bubbles", serif;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     margin: var(--spacing-medium) var(--spacing-small) var(--spacing-small) var(--spacing-small);
   }
   
@@ -290,7 +337,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(231, 232, 233);
+    background-color: var(--hover-color);  /*-------------------*/
     padding: 0 0.5rem 0 0.5rem;
   }
   
@@ -298,25 +345,25 @@
     margin-top: auto;
   }
   
-  /* Footer Styles */
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+/* Footer Styles */
+footer {
+  justify-content: center;
+  padding: 20px 0;
+  text-align: center;
+  font-family: var(--font-family-footer);
+}
+
+.footer-content {
+  color: antiquewhite;
+  margin: 0 auto;
+}
+
+.social-media i:hover {
+  cursor: pointer;
+  color: #a7a7ac;
+}
   
-  .footer-content {
-    color: antiquewhite;
-    margin: 0 auto;
-  }
-  
-  .social-media i:hover {
-    cursor: pointer;
-    color: #a7a7ac;
-  }
-  
+
   /* Scroll Button */
   .scroll-btn {
     position: fixed;
@@ -397,6 +444,7 @@
     border-radius: var(--border-radius);
     transition: box-shadow 0.3s ease, border-color 0.3s ease; 
   }
+
   /*Focus*/
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -426,10 +474,10 @@
 
     .footer-content {
       flex-direction: column;
-    }
-    .footer1, .footer2, .footer3 {
+  }
+  .footer1, .footer2, .footer3 {
       width: 90%;
-    }
+  }
     .product-options {
       flex-direction: row;
     }
@@ -449,4 +497,39 @@
 
   }
   
-  @media (max-width: 530px) {}
+  @media (max-width: 530px) {
+    #footer-logo{
+       display: none;
+    }
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    } 
+
+  }
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #121212; /* Fondo oscuro */
+      color: #ffffff; /* Texto blanco */
+  }
+  .intro-animation {
+    background-color: rgb(41, 40, 40);
+  }
+  :root {
+    /* Colors */
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(36, 35, 35);
+    --tertiary-color: rgb(255, 255, 255);
+    --hover-color: rgb(74, 74, 74);
+    --background-color: rgb(12, 12, 42);
+    --text-color: rgb(253, 254, 255);
+    --button-bg-color: rgba(165, 165, 165, 0.362);
+    --card-bg-color: rgb(40, 40, 40);
+  }
+
+}
+
+
