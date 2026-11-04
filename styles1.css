@@ -417,3 +417,342 @@ footer {
         background-color: #333333;
     }
   }
+
+/* Portfolio polish */
+:root {
+    --primary-color: #142a2a;
+    --secondary-color: #1d3836;
+    --highlight-color: #fffaf0;
+    --button-bg: #fffaf0;
+    --button-hover-bg: #b64d32;
+    --button-color: #173a35;
+    --footer-bg: #112725;
+    --box-shadow: 0 12px 30px rgba(8, 24, 23, 0.24);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--primary-color);
+    color: #fffaf0;
+    font-family: "League Spartan", sans-serif;
+}
+
+.first-page {
+    min-height: 640px;
+    height: 100svh;
+    max-height: 960px;
+    background-image: linear-gradient(180deg, rgba(10, 25, 23, 0.35), rgba(10, 25, 23, 0.22) 46%, rgba(10, 25, 23, 0.68)), url('images/p-hats-2.jpg');
+    background-attachment: scroll;
+}
+
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    height: 76px;
+    padding: 0 clamp(1rem, 4vw, 4rem);
+    box-sizing: border-box;
+    background: rgba(15, 36, 34, 0.46);
+    transition: background-color 0.3s ease;
+}
+
+.search-bar:hover {
+    color: #fffaf0;
+    background-color: rgba(15, 36, 34, 0.88);
+}
+
+.search-bar img:nth-of-type(1),
+.search-bar img:nth-of-type(2) {
+    width: 3.25rem;
+    height: 3.25rem;
+    margin: 0;
+    object-fit: contain;
+}
+
+.search-bar .title-container {
+    margin: 0;
+    font-family: "Delius Unicase", sans-serif;
+    font-size: clamp(1.25rem, 3vw, 2.25rem);
+    text-align: center;
+}
+
+.concept-note {
+    position: absolute;
+    top: 92px;
+    left: 50%;
+    z-index: 2;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.65rem 1rem;
+    transform: translateX(-50%);
+    border: 1px solid rgba(255, 250, 240, 0.55);
+    border-radius: 2px;
+    background: rgba(17, 39, 37, 0.78);
+    color: #fffaf0;
+    font: 600 0.9rem/1.3 "League Spartan", sans-serif;
+    text-align: center;
+}
+
+#first-page-buttons {
+    align-items: end;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: clamp(2rem, 7vh, 5rem);
+}
+
+.first-page button {
+    width: auto;
+    min-width: 13rem;
+    height: auto;
+    min-height: 3.25rem;
+    margin: 0;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid rgba(255, 250, 240, 0.85);
+    border-radius: 2px;
+    font: 600 1rem "League Spartan", sans-serif;
+}
+
+.first-page button:hover {
+    background-color: #b64d32;
+}
+
+.about-us {
+    align-items: center;
+    gap: clamp(1rem, 4vw, 3.5rem);
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 3rem);
+    box-sizing: border-box;
+}
+
+.about-us img {
+    flex: 0 1 38%;
+    width: 38%;
+    max-height: 560px;
+    margin: 0;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: var(--box-shadow);
+}
+
+.about-us-text {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.about-us-text h1,
+.more-details h1 {
+    margin: 0 0 1.25rem;
+    color: #e7aa65;
+    font-family: "Delius Unicase", sans-serif;
+    font-size: clamp(1.65rem, 3vw, 2.4rem);
+}
+
+.about-us-text h2 {
+    margin: 1.25rem 0 0.35rem;
+    color: #f0c58f;
+    font-size: 1.25rem;
+}
+
+.about-us-text p {
+    margin-top: 0;
+    color: rgba(255, 250, 240, 0.86);
+    line-height: 1.55;
+}
+
+.artisans-section {
+    margin: 0;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
+    background: #e9e2d4;
+    box-shadow: none;
+}
+
+.artisans-container {
+    width: min(100%, 1080px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "card1 title card2" "card3 card4 card5";
+    gap: 1.25rem;
+}
+
+.section-title {
+    margin: 0;
+    color: #173a35;
+    font-family: "Delius Unicase", sans-serif;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    text-align: center;
+}
+
+.artisan-card {
+    width: 100%;
+    height: 340px;
+    border-radius: 2px;
+    background: #173a35;
+    box-shadow: 0 8px 20px rgba(22, 38, 34, 0.14);
+}
+
+.artisan-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-info {
+    background: linear-gradient(transparent, rgba(10, 24, 22, 0.95));
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.artisan-name {
+    margin: 0;
+}
+
+.artisan-description {
+    opacity: 1;
+    line-height: 1.4;
+}
+
+.more-details {
+    max-width: 1080px;
+    gap: clamp(2rem, 6vw, 5rem);
+    margin: 0 auto;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
+    background: transparent;
+    box-shadow: none;
+}
+
+.more-details > div {
+    flex: 1;
+}
+
+.more-details h1 {
+    color: #e7aa65;
+    font-size: 1.75rem;
+}
+
+.more-details ul {
+    padding-left: 1.2rem;
+    color: rgba(255, 250, 240, 0.86);
+    line-height: 1.65;
+}
+
+footer {
+    align-items: center;
+    padding: 2rem clamp(1rem, 4vw, 3rem);
+    box-sizing: border-box;
+}
+
+#footer-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.footer-content {
+    width: min(100%, 1050px);
+    gap: 1.5rem;
+    align-items: flex-start;
+    color: #fffaf0;
+}
+
+.footer-content > div {
+    width: 33.333%;
+    line-height: 1.5;
+}
+
+.footer-content h2 {
+    color: #f0c58f;
+    font-size: 1.2rem;
+}
+
+.footer-content a {
+    color: inherit;
+}
+
+.social-media i {
+    margin: 0 0.4rem;
+}
+
+@media (max-width: 768px) {
+    .first-page {
+        min-height: 560px;
+    }
+
+    .search-bar {
+        height: 68px;
+    }
+
+    .search-bar .title-container {
+        font-size: clamp(1rem, 4vw, 1.6rem);
+    }
+
+    .about-us {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-us img {
+        width: 100%;
+        max-height: 360px;
+    }
+
+    .artisans-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: "title title" "card1 card2" "card3 card4" "card5 card5";
+    }
+
+    .artisan-card:nth-child(6) {
+        width: min(100%, 340px);
+        justify-self: center;
+    }
+
+    .more-details {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 530px) {
+    .concept-note {
+        top: 84px;
+        font-size: 0.82rem;
+    }
+
+    #first-page-buttons {
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .first-page button {
+        min-width: min(13rem, calc(100vw - 2rem));
+    }
+
+    .artisans-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "card1" "card2" "card3" "card4" "card5";
+    }
+
+    .artisan-card,
+    .artisan-card:nth-child(6) {
+        width: min(100%, 360px);
+        justify-self: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content > div {
+        width: 100%;
+    }
+}

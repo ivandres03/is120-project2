@@ -515,6 +515,367 @@ footer {
       background-color: #121212; /* Fondo oscuro */
       color: #ffffff; /* Texto blanco */
   }
+
+/* Portfolio polish */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding-top: 50px;
+  background: #f2eee5;
+  color: #173a35;
+  font-family: "League Spartan", sans-serif;
+}
+
+.main-nav {
+  top: 0;
+  left: 0;
+  height: 64px;
+  margin: 0;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  box-sizing: border-box;
+  background: #173a35;
+  color: #fffaf0;
+  box-shadow: 0 3px 14px rgba(12, 31, 28, 0.2);
+}
+
+.main-nav img {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+}
+
+.main-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-button {
+  margin: 0 0.4rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 2px;
+  font-size: 1rem;
+}
+
+.nav-button:hover {
+  background: rgba(255, 250, 240, 0.12);
+}
+
+.hamburguer-dropdown {
+  top: 64px;
+  background: #e9e2d4;
+}
+
+.hamburguer-dropdown a {
+  color: #173a35;
+}
+
+.shop-concept-note {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  margin: 1rem auto 0;
+  transform: none;
+  border-color: #e2c29c;
+  background: #f8e9d5;
+  color: #653623;
+}
+
+.main-container {
+  margin: 2rem clamp(1rem, 4vw, 3rem);
+  background: transparent;
+}
+
+.call-to-action {
+  max-width: 850px;
+  margin: 2rem 1rem 0;
+  color: #173a35;
+  font-family: "Delius Unicase", sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  text-align: center;
+}
+
+.product-options {
+  width: 100%;
+  gap: 1rem;
+  margin: 2rem 0 3rem;
+}
+
+.card {
+  width: min(21vw, 280px);
+  height: 340px;
+  margin: 0;
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(22, 38, 34, 0.14);
+}
+
+.card p {
+  height: 64px;
+  flex: 0 0 64px;
+  margin: 0;
+  border-radius: 0;
+  background: #173a35;
+  color: #fffaf0;
+  font-family: "Delius Unicase", sans-serif;
+  font-size: 1.35rem;
+}
+
+.card img {
+  height: calc(100% - 64px);
+  border-radius: 0;
+}
+
+.divider {
+  margin: 3rem clamp(1rem, 6vw, 5rem);
+  color: #a44c34;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.divider p {
+  margin: 0;
+}
+
+h1[id] {
+  margin: 4rem 1rem 0;
+  color: #173a35;
+  font-family: "Delius Unicase", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  text-align: center;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1.25rem;
+  width: min(100%, 1240px);
+  margin: 1.5rem auto 4rem;
+}
+
+.p-card {
+  width: 100%;
+  max-height: none;
+  overflow: hidden;
+  border: 1px solid #dfd6c8;
+  border-radius: 2px;
+  background: #fffdf8;
+  box-shadow: 0 5px 16px rgba(22, 38, 34, 0.08);
+}
+
+.p-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(22, 38, 34, 0.16);
+}
+
+.img-container {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.img-container img {
+  height: 100%;
+  transition: transform 0.35s ease;
+}
+
+.p-card:hover .img-container img {
+  transform: scale(1.035);
+}
+
+.p-card .card-info {
+  min-height: 190px;
+  height: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #fffdf8;
+  color: #173a35;
+}
+
+.p-card .name {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.p-card .description {
+  margin: 0 0 0.75rem;
+  color: #5c625b;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.p-card .price {
+  margin: auto 0 0.5rem;
+  color: #a44c34;
+  font-size: 1.1rem;
+}
+
+.p-card button,
+.form-section input[type="submit"] {
+  border: 0;
+  border-radius: 2px;
+  background: #b64d32;
+  color: #fffaf0;
+  cursor: pointer;
+  font: 600 1rem "League Spartan", sans-serif;
+  padding: 0.65rem 1rem;
+}
+
+.p-card button:hover,
+.form-section input[type="submit"]:hover {
+  background: #873a28;
+}
+
+.dropdown {
+  top: 52%;
+}
+
+.dropdown-btn {
+  background: #173a35;
+  color: #fffaf0;
+}
+
+.dropdown-content {
+  background: #fffdf8;
+  box-shadow: 0 8px 20px rgba(22, 38, 34, 0.18);
+}
+
+.dropdown-content a {
+  color: #173a35;
+  text-decoration: none;
+}
+
+.form-section {
+  width: min(100%, 640px);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border: 1px solid #dfd6c8;
+  background: #fffdf8;
+  text-align: left;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form-section input,
+.form-section textarea {
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  font: 1rem "League Spartan", sans-serif;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  border-color: #a44c34;
+  box-shadow: 0 0 0 3px rgba(164, 76, 52, 0.15);
+}
+
+footer {
+  margin-top: 4rem;
+  background: #112725;
+  color: #fffaf0;
+}
+
+footer .footer-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  color: #fffaf0;
+}
+
+footer .footer-content > div {
+  width: 33.333%;
+  line-height: 1.5;
+}
+
+footer .footer-content h2 {
+  color: #f0c58f;
+}
+
+footer a {
+  color: inherit;
+}
+
+.scroll-btn {
+  z-index: 4;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  border-radius: 2px;
+  background: #173a35;
+  color: #fffaf0;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: min(42vw, 320px);
+    height: 300px;
+  }
+
+  .main-container {
+    margin: 1.5rem 1rem 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 64px;
+  }
+
+  .main-nav {
+    height: 64px;
+  }
+
+  .shop-concept-note {
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .product-options {
+    gap: 0.75rem;
+  }
+
+  .card {
+    width: min(100%, 360px);
+    height: 300px;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-content > div {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
   .intro-animation {
     background-color: rgb(41, 40, 40);
   }
